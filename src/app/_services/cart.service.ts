@@ -18,10 +18,10 @@ export class CartService {
       this.cartTotal += item.price;
     }
     else if (this.cart.includes(item)) {
-      let item = this.cart.find(x => x.id == item.id);
-      if (item !== undefined) {
-        item.quantity++;
-        this.cartTotal += item.price;
+      let clothingItem = this.cart.find(x => x.id == item.id);
+      if (clothingItem !== undefined) {
+        clothingItem.quantity++;
+        this.cartTotal += clothingItem.price;
       }
     }
   }
