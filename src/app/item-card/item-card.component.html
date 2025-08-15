@@ -1,0 +1,13 @@
+<div class="card shadow text-center" style="max-width: 350px; min-width: 350px">
+  <div class="card-body hover" (click)="OpenItemModal()">
+    <h5 class="card-title">{{item.name}}</h5>
+    <img src="{{item.pictures[0]}}"style="width: 100px; height: 100px" alt="clothing" />
+    <p class="card-text">{{item.size}}</p>
+    <p class="card-text fw-bold">${{item.price}}</p>
+  </div>
+  <div class="card-footer">
+    <div class=" d-flex flex-wrap justify-content-center">
+      <button class="btn {{btnColor}}" (click)="AddToCart()">Add To Cart</button>
+    </div>
+  </div>
+</div>

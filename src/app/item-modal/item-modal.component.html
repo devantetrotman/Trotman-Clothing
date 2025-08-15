@@ -1,0 +1,21 @@
+<div class="modal-header">
+  <h2>{{item.name}}</h2>
+  <button class="btn-close" (click)="bsModalRef.hide()"></button>
+</div>
+
+<div class="modal-body">
+  <carousel>
+    <div *ngFor="let picture of item.pictures">
+      <slide><img src="{{picture}}" alt="slide" style="display:block; width: 100%;" /></slide>
+    </div>
+  </carousel>
+
+  <p>{{item.description}}</p>
+  <p>Size: {{item.size}}</p>
+  <p>Price: ${{item.price}}</p>
+</div>
+
+<hr>
+<div class="d-flex flex-wrap justify-content-center m-4">
+  <button class="btn {{btnColor}}" (click)="AddToCart()">Add To Cart</button>
+</div>

@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="mb-2">
+    <div class="mt-4">
+      <button class="btn btn-outline-primary mb-2 me-2" (click)="isCollapsed = !isCollapsed">Filter</button>
+      <button class="btn btn-outline-secondary mb-2" (click)="ResetFilters()" [hidden]="!filtering">Reset</button>
+    </div>
+    <div [collapse]="isCollapsed" [isAnimated]="true">
+      <div class="border mb-2 shadow-sm" style="width: 250px;">
+        <form>
+          <div class="row mx-0">
+            <div class="col">
+              <small><b>Size:</b></small>
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox"
+                         class="form-check-input position-static me-2"
+                         [(ngModel)]="size3432"
+                         (change)="FilterBySize()"
+                         name="size3432" />
+                  <label class="form-check-label small">32x34</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox"
+                         class="form-check-input position-static me-2"
+                         [(ngModel)]="size3434"
+                         (change)="FilterBySize()"
+                         name="size3434" />
+                  <label class="form-check-label small">34x34</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox"
+                         class="form-check-input position-static me-2"
+                         [(ngModel)]="size3634"
+                         (change)="FilterBySize()"
+                         name="size3634" />
+                  <label class="form-check-label small">36x34</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox"
+                         class="form-check-input position-static me-2"
+                         [(ngModel)]="size3832"
+                         (change)="FilterBySize()"
+                         name="size3832" />
+                  <label class="form-check-label small">38x32</label>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <small><b>Price:</b></small>
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox"
+                         class="form-check-input position-static me-2"
+                         [(ngModel)]="price3039"
+                         (change)="FilterByPrice()"
+                         name="price3039" />
+                  <label class="form-check-label small">$30-$39</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox"
+                         class="form-check-input position-static me-2"
+                         [(ngModel)]="price4049"
+                         (change)="FilterByPrice()"
+                         name="price4049" />
+                  <label class="form-check-label small">$40-$49</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox"
+                         class="form-check-input position-static me-2"
+                         [(ngModel)]="price5059"
+                         (change)="FilterByPrice()"
+                         name="price5059" />
+                  <label class="form-check-label small">$50-$59</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div *ngFor="let item of items" class="col-lg-4 col-md-4 m-1">
+      <app-item-card [item]="item"></app-item-card>
+    </div>
+  </div>
+</div>

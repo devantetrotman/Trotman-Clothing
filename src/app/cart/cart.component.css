@@ -1,0 +1,6 @@
+.center-everything {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  /* Optionally: set min-height or height to make vertical centering meaningful */
+}

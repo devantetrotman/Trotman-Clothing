@@ -1,0 +1,35 @@
+<h2 class="text-center m-5" style="{{displayStyle}}">Your cart is currently empty.</h2>
+<div class="container" *ngFor="let item of items">
+  <div class="center-everything row border border-dark my-1">
+    <div class="col">
+      <img src="{{item.pictures[0]}}" style="width: 100px; height: 100px" alt="pic" />
+    </div>
+    <div class="col">
+      <p>{{item.name}}</p>
+    </div>
+    <div class="col">
+      <p>Size: {{item.size}}</p>
+    </div>
+    <div class="col">
+      <p>Price: ${{item.price}}</p>
+    </div>
+    <div class="col">
+      <button (click)="MinusSignClicked(item)">-</button>
+    </div>
+    <div class="col">
+      <p>Qty: {{item.quantity}}</p>
+    </div>
+    <div class="col">
+      <button (click)="PlusSignClicked(item)">+</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-danger" (click)="RemoveFromCart(item)">Remove</button>
+    </div>
+  </div>
+</div>
+<div class="container bg-light">
+  <div>
+    <p class="fw-bold">Total: ${{cartTotal}}</p>
+    <button style="{{disabled}}" routerLink="/checkout">Proceed to Checkout</button>
+  </div>
+</div>

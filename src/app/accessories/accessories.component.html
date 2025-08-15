@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="mb-2">
+    <div>
+      <button class="btn btn-outline-primary mb-2 me-2" (click)="isCollapsed = !isCollapsed">Filter</button>
+      <button class="btn btn-outline-secondary mb-2" (click)="ResetFilters()" [hidden]="!filtering">Reset</button>
+    </div>
+    <div [collapse]="isCollapsed" [isAnimated]="true">
+      <div class="border mb-2 shadow-sm" style="width: 250px;">
+        <form>
+          <div class="row mx-0">
+            <div class="col">
+              <small><b>Price:</b></small>
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox"
+                         class="form-check-input position-static me-2"
+                         [(ngModel)]="price0010"
+                         (change)="FilterByPrice()"
+                         name="price0010" />
+                  <label class="form-check-label small">$0-$10</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox"
+                         class="form-check-input position-static me-2"
+                         [(ngModel)]="price1120"
+                         (change)="FilterByPrice()"
+                         name="price1120" />
+                  <label class="form-check-label small">$11-$20</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox"
+                         class="form-check-input position-static me-2"
+                         [(ngModel)]="price2130"
+                         (change)="FilterByPrice()"
+                         name="price2130" />
+                  <label class="form-check-label small">$21-$30</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div *ngFor="let item of items" class="col-lg-4 col-md-6 m-1">
+      <app-item-card [item]="item"></app-item-card>
+    </div>
+  </div>
+</div>
