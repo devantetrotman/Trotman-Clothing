@@ -1,5 +1,7 @@
 # Trotman Clothing Website
 
+Generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+
 This project emulates a clothing website that allows you to browse for clothing items and add them to a cart for checkout. The website contains a title graphic that will display across every page, as pictured below:
 
 ![Title](public/assets/ReadMeImages/Title.png)
@@ -44,38 +46,35 @@ List of Hoodies available on the website.
 
 ### Acessories Page
 
-![Acessories](public/assets/ReadMeImages/AcessoriesPage.png)
+![Accessories](public/assets/ReadMeImages/AccessoriesPage.png)
 
 List of Accessories available on the website.
 
-## About Page
+## About Us Page
 
-![About Page](public/assets/ReadMeImages/AboutPage.png)
+![About Us Page](public/assets/ReadMeImages/AboutUsPage.png)
 
-The About page features an accordion dropdown that contains the company mission, frequently asked questions, and contact information.
+The About Us page features an accordion dropdown that contains the company mission, frequently asked questions, and contact information.
 
-## Checkout Page
-
-![Checkout Page](public/assets/ReadMeImages/OrderSubmittedPage.png)
-
-The Checkout page will display the official total of your purchase, including tax and shipping cost. Here you will also fill out a form with your shipping address and payment method. 
-Once that is complete, you will hit the submit button to place your order.
-
-## Order Submit Page
+## Cart Page
 
 ![Cart Page](public/assets/ReadMeImages/CartPage.png)
 
 The Cart page shows all items that have been added to the cart for potential checkout. Here you're able to see the total price of everything in your cart, as well as increase or decrease the quantity of the item.
 Each item will also have a remove button that will clear it from the cart. After everything is to you're liking you can hit the Proceed To Checkout button to bring up the checkout page.
 
+## Checkout Page
+
+![Checkout Page](public/assets/ReadMeImages/CheckoutPage.png)
+
+The Checkout page will display the official total of your purchase, including tax and shipping cost. Here you will also fill out a form with your shipping address and payment method. 
+Once that is complete, you will hit the submit button to place your order.
+
 ## Order Submit Page
 
 ![Order Submit Page](public/assets/ReadMeImages/OrderSubmittedPage.png)
 
 The Order Submit Page displays a message telling you that your order has been successfully submitted, with a Back To Home button that will take you to the website's home page.
-
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
 
 ## Development server
 
